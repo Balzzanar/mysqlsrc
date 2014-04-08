@@ -3,7 +3,7 @@
 # Deploy script for wapi sql scripts
 #
 #------------------------------------------------
-db='dansidb'I
+db='dansidb'
 user='<user>'
 pass='<passwd>'
 
