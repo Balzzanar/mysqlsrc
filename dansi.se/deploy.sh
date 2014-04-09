@@ -14,8 +14,8 @@ pass='<passwd>'
 # echo '<SQL_SCRIPT>'
 # mysql -u <USER> -p<PASS> <DATABASE> < <SQL_SCRIPT>
 #------------------------------------------------
-echo 'Products.sql'
-"$mysql_path"mysql -u "$user" -p"$pass" "$db" < tbl_products.sql
+echo 'TBL: dansi_products'
+mysql -u "$user" -p"$pass" "$db" < tbl_dansi_products.sql
 
 
 #------------------------------------------------
@@ -24,8 +24,8 @@ echo 'Products.sql'
 # echo '<SQL_SCRIPT>'
 # mysql -u <USER> -p<PASS> <DATABASE> < <SQL_SCRIPT>
 #------------------------------------------------
-echo 'Get_all_products.sql'
-"$mysql_path"mysql -u "$user" -p"$pass" "$db" < pro_get_all_products.sql
+echo 'PRO: dansi_products_get'
+mysql -u "$user" -p"$pass" "$db" < pro_dansi_products_get.sql
 
-echo 'New_order.sql'
-"$mysql_path"mysql -u "$user" -p"$pass" "$db" < pro_new_order.sql
+echo 'PRO: dansi_product_new'
+mysql -u "$user" -p"$pass" "$db" < pro_dansi_product_new.sql
