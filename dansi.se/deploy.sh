@@ -1,6 +1,6 @@
 #!/bin/bash
 #------------------------------------------------
-# Deploy script for wapi sql scripts
+# Deploy script for dansi.se sql scripts
 #
 #------------------------------------------------
 db='dansidb'
@@ -16,6 +16,9 @@ pass='<passwd>'
 #------------------------------------------------
 echo 'TBL: dansi_products'
 mysql -u "$user" -p"$pass" "$db" < tbl_dansi_products.sql
+
+echo 'TBL: dansi_sales'
+mysql -u "$user" -p"$pass" "$db" < tbl_dansi_sales.sql
 
 
 #------------------------------------------------
