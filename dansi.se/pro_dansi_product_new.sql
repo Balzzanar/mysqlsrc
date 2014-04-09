@@ -19,6 +19,9 @@ CREATE PROCEDURE `dansi_product_new` (
     )
 
   BEGIN
+
+    DECLARE newID INT;
+
     INSERT INTO `dansi_products` (
       `name`
       ,`price`
@@ -35,4 +38,19 @@ CREATE PROCEDURE `dansi_product_new` (
       ,inimg_thumb
     )
     ;
+
+    SET newID = LAST_INSERT_ID();
+
+    INSERT INTO `dansi_sales` (
+      `id_product`
+      ,`num`
+    )
+
+    VALUES (
+      newID
+      ,0
+    )
+    ;
+
+
   END//
