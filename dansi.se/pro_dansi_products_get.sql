@@ -4,6 +4,7 @@ DELIMITER //
 | GetAllProducts
 | 
 | Returns all the products from the products table.
+| Dose not return delete flagged products.
 |-------------------------------------------------------- 
 */
 
@@ -25,6 +26,7 @@ BEGIN
     dansi_products p
 		,dansi_sales s
 	WHERE
-		p.id_product = s.id_product
+		  p.id_product    = s.id_product
+  and p.del_flg       != 'X'
 ;
 END//
